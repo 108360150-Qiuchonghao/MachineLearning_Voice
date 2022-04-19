@@ -1,0 +1,1 @@
+Django si Python sia e tsit e khai guan e khing i e nng the siat ke iong MVT e boo sik MVT hun piat tai piau Model boo hing View kai bin kah Template pang boo
