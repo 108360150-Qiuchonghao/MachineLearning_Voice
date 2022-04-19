@@ -37,7 +37,7 @@
 3.程式：
 
 我使用 jupyter notebook 編譯程式
-![image](https://github.com/MachineLearningNTUT/regression-T108360150/blob/main/IMG/jupyter1.jpg)
+![image](https://github.com/108360150-Qiuchonghao/MachineLearning_Houseprice/blob/main/IMG/jupyter1.jpg)
 
 
 # Data Preprocessing：
@@ -136,7 +136,7 @@ In [4]:
             audio, sr = load_and_trim(path)
             features.append(mfcc(audio, sr, numcep = mfcc_dim, nfft = 551))  
 讀取完畢：            
-![imge](https://github.com/MachineLearningNTUT/automatic-speech-recognition-T108360150/blob/main/IMG/1.png)
+![imge](https://github.com/108360150-Qiuchonghao/MachineLearning_Voice/blob/main/IMG/1.png)
 
 In [5]:      
         texts= get_tran_texts(wav_files, tran_path)
@@ -152,7 +152,7 @@ In [5]:
 
         char2id = {c: i for i, c in enumerate(chars)}
         id2char = {i: c for i, c in enumerate(chars)}
-![imge](https://github.com/MachineLearningNTUT/automatic-speech-recognition-T108360150/blob/main/IMG/2.png)
+![imge](https://github.com/108360150-Qiuchonghao/MachineLearning_Voice/blob/main/IMG/2.png)
 
 # Training PART：
 In [6]:      
@@ -287,8 +287,8 @@ In [8]:
         plt.show()
 
 Epochs1-50的訓練結果如圖所示：
-![imge](https://github.com/MachineLearningNTUT/automatic-speech-recognition-T108360150/blob/main/IMG/6.png)
-![imge](https://github.com/MachineLearningNTUT/automatic-speech-recognition-T108360150/blob/main/IMG/3.png)
+![imge](https://github.com/108360150-Qiuchonghao/MachineLearning_Voice/blob/main/IMG/6.png)
+![imge](https://github.com/108360150-Qiuchonghao/MachineLearning_Voice/blob/main/IMG/3.png)
 
 # Test Part：
 In [9]:   
@@ -332,9 +332,9 @@ In [9]:
                 while -1 in pred_ids:
                     pred_ids.remove(-1)
                 f.write(str(j) +  ',' + (''.join([id2char[i] for i in pred_ids]))+'\n')
-![imge](https://github.com/MachineLearningNTUT/automatic-speech-recognition-T108360150/blob/main/IMG/4.png)
+![imge](https://github.com/108360150-Qiuchonghao/MachineLearning_Voice/blob/main/IMG/4.png)
 
 4.心得：
 這次語音識別用到了mfcc的知識，mfcc是語音特徵參數（Mel-scale Frequency Cepstral Coefficients）。
 我把自己的預測結果與學長放在ppt中的部分做比較發現，常常有一些詞語只是在最後末尾多了n或m，應該是對音頻的處理沒有處理好，導致訓練出來效果不佳，可以在這方面做改進。
-![imge](https://github.com/MachineLearningNTUT/automatic-speech-recognition-T108360150/blob/main/IMG/5.png)
+![imge](https://github.com/108360150-Qiuchonghao/MachineLearning_Voice/blob/main/IMG/5.png)
